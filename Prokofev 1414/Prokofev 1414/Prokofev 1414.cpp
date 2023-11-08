@@ -2,16 +2,17 @@
 //
 
 #include <iostream>
+using namespace std;
 
 int main() 
 {
     setlocale(LC_ALL, "");
     int n;
-    std::cout << "Введите размер массива: ";
-    std::cin >> n;
+    cout << "Введите размер массива: ";
+    cin >> n;
 
     if (n <= 0) {
-        std::cout << "Размер массива должен быть положительным числом." << std::endl;
+        cout << "Размер массива должен быть положительным числом." << endl;
         return 1;
     }
 
@@ -22,9 +23,9 @@ int main()
     int indexOfMin = 0;
 
     // Ввод элементов массива
-    std::cout << "Введите элементы массива:" << std::endl;
+    cout << "Введите элементы массива:" << endl;
     for (int i = 0; i < n; i++) {
-        std::cin >> X[i];
+        cin >> X[i];
 
         if (X[i] > maxElement) {
             maxElement = X[i];
@@ -37,8 +38,8 @@ int main()
         }
     }
 
-    std::cout << "Максимальный элемент: " << maxElement << " (индекс " << indexOfMax << ")" << std::endl;
-    std::cout << "Минимальный элемент: " << minElement << " (индекс " << indexOfMin << ")" << std::endl;
+    cout << "Максимальный элемент: " << maxElement << " (индекс " << indexOfMax << ")" << endl;
+    cout << "Минимальный элемент: " << minElement << " (индекс " << indexOfMin << ")" << endl;
 
     return 0;
 }
